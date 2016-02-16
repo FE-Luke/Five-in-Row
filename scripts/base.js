@@ -38,7 +38,7 @@ window.onload = function () {
         tx = x,ty = y;
         while(dictName[tx + '_' + (ty+1)]){hang++;ty++;} /*当当前棋子的y+1(向右判断)存在时计数器+1*/
         tx = x,ty=y;//重新初始化临时x和y
-        while(dictName[tx + '_' + (ty-1)]){hang++;ty--;} /*当当前棋子的y-1(向右判断)存在时计数器+1*/
+        while(dictName[tx + '_' + (ty-1)]){hang++;ty--;} /*当当前棋子的y-1(向左判断)存在时计数器+1*/
         if(hang >= 5){return 1;/*如果计数器>5即有一方赢*/
         }else{
             hang = 1,tx = x,ty = y;//重新还原计数器,临时x和y的值
