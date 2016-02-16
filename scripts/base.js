@@ -73,18 +73,6 @@ window.onload = function () {
             location.reload();
         }
     };
-
-    var showHead = function(){
-        if(switch1){
-            document.getElementsByClassName('left-head')[0].style.backgroundImage = "url('./images/sikao.png')";
-            document.getElementsByClassName('right-head')[0].style.backgroundImage = "url('./images/57.png')";
-        }else{
-            document.getElementsByClassName('right-head')[0].style.backgroundImage = "url('./images/sikao.png')";
-            document.getElementsByClassName('left-head')[0].style.backgroundImage = "url('./images/57.png')";
-        }
-    };
-    var tt = setInterval(showHead,20);
-
     for(k=0;k<el1.length;k++){
         el1[k].onclick = function () {
             if(this.hasAttribute("hasColor")){
@@ -105,9 +93,6 @@ window.onload = function () {
                 document.getElementById('audio').src='./sound/drop.ogg';
                 document.getElementById('audio').play();
                 if(panduan(this.getAttribute('id'),dict1)){
-                    clearInterval(tt);
-                    document.getElementsByClassName('left-head')[0].style.backgroundImage = "url('./images/48.png')";
-                    document.getElementsByClassName('right-head')[0].style.backgroundImage = "url('./images/36.png')";
                     showWin("白棋胜!");
                 }
             }else{
@@ -124,9 +109,6 @@ window.onload = function () {
                 document.getElementById('audio').src='./sound/drop.ogg';
                 document.getElementById('audio').play();
                 if(panduan(this.getAttribute('id'),dict2)){
-                    clearInterval(tt);
-                    document.getElementsByClassName('right-head')[0].style.backgroundImage = "url('./images/48.png')";
-                    document.getElementsByClassName('left-head')[0].style.backgroundImage = "url('./images/36.png')";
                     showWin("黑棋胜!");
                 }
 

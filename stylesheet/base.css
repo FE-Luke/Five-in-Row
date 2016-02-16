@@ -1,11 +1,11 @@
 body{
     font-family: 'Microsoft Yahei';
-}
+    background: url('../images/bg.jpg');
+  }
 #scene{
     width: 800px;
     height: 800px;
     margin:70px auto;
-    background: white;
     position: relative;
 }
 #result{
@@ -42,41 +42,6 @@ body{
     height: 50px;
     line-height: 50px;
     border: 3px solid white;
-}
-.head{
-    position: absolute;
-    width: 300px;
-    height: 300px;
-    background: url('../images/57.png');
-    background-size: 75% 75%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 5px solid black;
-}
-.left-head{
-    top: 150px;
-    left:100px;
-}
-.right-head{
-    top: 150px;
-    right:100px;
-}
-.name{
-    width: 300px;
-    height: 50px;
-    line-height: 50px;
-    text-align: center;
-    font-size: 50px;
-}
-.left-name{
-    position: absolute;
-    left: 100px;
-    top: 500px;
-}
-.right-name{
-    position: absolute;
-    right:100px;
-    top: 500px;
 }
 .block{
     background: rgb(144,87,13);
